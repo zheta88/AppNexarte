@@ -1,0 +1,32 @@
+﻿@model List<AppNexarte.Models.Nomina>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Empleados</h1>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Registro</th>
+      <th scope="col">Fecha de Creacion</th>
+      <th scope="col"> idConcepto</th>
+      <th scope="col">idEmpleado</th>
+      <th scope="col">Valor Nomina</th>
+      <th scope="col">Cantidad</th>
+    </tr>
+  </thead>
+  <tbody>
+          @foreach(var nom in Model)
+            {
+              <tr>
+              <td>@nom.Registro</td>
+              <td>@nom.Fecha</td>
+              <td>@nom.Concepto</td>
+              <td>@nom.Empleado</td>
+              <td>@nom.ValorNomina</td>
+              <td>@nom.Cantidad</td>
+              </tr>
+            }
+  </tbody>
+</table>
